@@ -4,13 +4,14 @@ import {AboutPageAsync} from './pages/AboutPage/About.async';
 import {MainPageAsync} from './pages/MainPage/Main.async';
 import './styles/index.scss'
 import {useTheme} from './theme/useTheme';
+import {cls} from './helpers/classNames/classNames';
 
 
 const App = () => {
     const {theme, toggleTheme} = useTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={cls('app', {flag: true, add: true}, [theme])}>
             <button onClick={toggleTheme}>TOGGLE</button>
             <div>
                 <Link to="/">main</Link>
