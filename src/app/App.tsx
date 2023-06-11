@@ -12,11 +12,12 @@ const App = () => {
 
   return (
     <div className={cls('app', {}, [theme])}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback="">
         <Navbar />
 
         <div className="content-page">
           <Sidebar />
+
           <AppRouter />
         </div>
       </Suspense>

@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:i18next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,6 +19,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'react/jsx-indent': [2, 2], // отступы в jsx  коде
@@ -37,6 +39,7 @@ module.exports = {
     'no-underscore-dangle': 'off', // отключения нижних подчеркиваний
     'object-curly-spacing': ['error', 'always', { arraysInObjects: true }], // отступы внутри обьекта
     // 'max-len': ['error', { code: 80, tabWidth: 2 }],
+    'i18next/no-literal-string': ['error', { markupOnly: true }], // только для отсутвия перевода внутри jsx
   },
   // для глобальных констант
   globals: {
