@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -38,7 +39,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off', // dev зависимости импорта
     'no-underscore-dangle': 'off', // отключения нижних подчеркиваний
     'object-curly-spacing': ['error', 'always', { arraysInObjects: true }], // отступы внутри обьекта
-    // 'max-len': ['error', { code: 80, tabWidth: 2 }],
+    'max-len': ['error', { code: 100, ignoreComments: true }], // для максимального количества строк
     'i18next/no-literal-string': ['error', { markupOnly: true }], // только для отсутвия перевода внутри jsx
   },
   // для глобальных констант
