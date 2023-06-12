@@ -17,9 +17,9 @@ const App = () => {
 
         <div className="content-page">
           <Sidebar />
-
           <AppRouter />
         </div>
+
       </Suspense>
     </div>
   );
