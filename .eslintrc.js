@@ -39,11 +39,26 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off', // dev зависимости импорта
     'no-underscore-dangle': 'off', // отключения нижних подчеркиваний
     'object-curly-spacing': ['error', 'always', { arraysInObjects: true }], // отступы внутри обьекта
-    'max-len': ['error', { code: 100, ignoreComments: true }], // для максимального количества строк
-    'i18next/no-literal-string': ['error', { markupOnly: true }], // только для отсутвия перевода внутри jsx
+    'max-len': ['error', {
+      code: 100,
+      ignoreComments: true,
+    }], // для максимального количества строк
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'to'],
+    }], // только для отсутвия перевода внутри jsx и игнора атрибута
   },
   // для глобальных констант
   globals: {
     __IS_DEV__: true,
   },
+  // позволяет для определенного типа файла переопределить правила
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
