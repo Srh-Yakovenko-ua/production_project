@@ -13,18 +13,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
 
   return (
     <div className={cls(style.Navbar, {}, [className])}>
-      <div className={style.links}>
-        <AppLink
-          to="/"
-          theme={AppLinkTheme.SECONDARY}
-          className={style.mainLink}
-        >
-          {t('Главная')}
-        </AppLink>
-        <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>
-          {t('О Сайте')}
-        </AppLink>
-      </div>
+      <div className={style.links} />
     </div>
   );
 };
